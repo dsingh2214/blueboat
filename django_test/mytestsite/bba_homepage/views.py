@@ -2,8 +2,9 @@ from django.shortcuts import render, redirect
 from .forms import ContactForm
 from django.contrib import messages
 import requests
+import os
 
-API_KEY = "DB64018EE4353DBFCB81F53B04CF3F7F0493699360271D68BE72AD6FE0FBED94FF241B0307BBBC2D4072C03696E9A963"
+API_KEY = os.environ.get('ELASTICEMAIL_API_KEY')
 
 
 class ApiClient:
